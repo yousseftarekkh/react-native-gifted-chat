@@ -352,7 +352,7 @@ class GiftedChat extends React.Component {
 
 		if (shouldResetInputToolbar === true) {
 			this.setIsTypingDisabled(true);
-			// this.resetInputToolbar();
+			this.resetInputToolbar();
 		}
 
 		this.props.onSend(messages);
@@ -377,11 +377,7 @@ class GiftedChat extends React.Component {
 			newComposerHeight
 		);
 		this.setState({
-			text: this.getTextFromProp(""),
-			composerHeight: newComposerHeight,
-			messagesContainerHeight: this.prepareMessagesContainerHeight(
-				newMessagesContainerHeight
-			)
+			text: this.getTextFromProp("")
 		});
 	}
 
